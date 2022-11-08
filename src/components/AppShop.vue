@@ -26,6 +26,11 @@
                     },
                 ]
             }
+        },
+        methods: {
+            getImagePath: function(imgPath){
+                return new URL(imgPath, import.meta.url).href;
+            }
         }
     }
 </script>
@@ -35,7 +40,7 @@
         <div class="container-main">
             <ul>
                 <li v-for="shopLink in shopLinks">
-                    <span><img src="shopLink.image" alt=""></span>
+                    <span><img :src="getImagePath(shopLink.image)" alt=""></span>
                     <span><a href="">{{shopLink.imgText}}</a></span>
                 </li>
             </ul>
@@ -70,6 +75,10 @@
                             max-width: 5vh;
                         }
 
+                        a{
+                            text-decoration: none;
+                            color: white;
+                        }
                         padding: 1rem;
                         color: white;
                     }
