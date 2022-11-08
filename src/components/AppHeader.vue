@@ -94,6 +94,7 @@
                 display: flex;
                 flex-direction: row;
                 li{
+                    margin: 0 1rem;
                     padding: 1rem;
                     line-height: calc(10vh - 2rem);
                     

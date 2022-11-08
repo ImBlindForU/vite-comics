@@ -22,7 +22,7 @@
                     },
                     {
                         imgText: "DC POWER VISA",
-                        image: "../assets/img/buy-dc-power-visa.svg",
+                        image: "../assets/img/buy-dc-power-visa.png",
                     },
                 ]
             }
@@ -68,7 +68,8 @@
                 li{
                     display: flex;
                     align-items: center;
-                    padding: 2rem;
+                    padding: 3rem;
+                    margin: 0 2rem;
                     span{
                         img{
                             
