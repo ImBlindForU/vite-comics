@@ -1,6 +1,52 @@
 <script>
     export default{
-        name: "AppHeader"
+        name: "AppHeader",
+        data(){
+            return{
+                headerLinks: [
+                    {
+                        title:"CHARACTERS",
+                        href: "/CHARACTERS",
+                    },
+                    {
+                        title:"COMICS",
+                        href: "/COMICS",
+                    },
+                    {
+                        title:"MOVIES",
+                        href: "/MOVIES",
+                    },
+                    {
+                        title:"TV",
+                        href: "/TV",
+                    },
+                    {
+                        title:"GAMES",
+                        href: "/GAMES",
+                    },
+                    {
+                        title:"COLLECTIBILES",
+                        href: "/COLLECTIBILES",
+                    },
+                    {
+                        title:"VIDEO",
+                        href: "/VIDEO",
+                    },
+                    {
+                        title:"FANS",
+                        href: "/FANS",
+                    },
+                    {
+                        title:"NEWS",
+                        href: "/NEWS",
+                    },
+                    {
+                        title:"SHOP",
+                        href: "/SHOP",
+                    }
+                ]
+            }
+        }
     }
 </script>
 
@@ -12,17 +58,10 @@
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href=""></a>HOME</li>
-                    <li><a href=""></a>HOME</li>
-                    <li><a href=""></a>HOME</li>
-                    <li><a href=""></a>HOME</li>
-                    <li><a href=""></a>HOME</li>
-                    <li><a href=""></a>HOME</li>
-                    <li><a href=""></a>HOME</li>
-                    <li><a href=""></a>HOME</li>
-                    <li><a href=""></a>HOME</li>
-                    <li><a href=""></a>HOME</li>
-
+                    <li v-for="headerLink in headerLinks">
+                        <a href="">{{headerLink.title}}</a>
+                    </li>
+                    
                 </ul>
                 
             </div>
@@ -55,14 +94,20 @@
                 display: flex;
                 flex-direction: row;
                 li{
-                    line-height: calc(10vh - 2rem);
                     padding: 1rem;
-                    &:hover{
-                        
-                        color: #0282f9;
-                        box-shadow: 0px -10px #0282f9 inset;
-                        
+                    line-height: calc(10vh - 2rem);
+                    
+                    a{
+                        text-decoration: none;
+                        color: black;
+                        &:hover{                 
+                            color: #0282f9;
+                        }
                     }
+                    &:hover{
+                        box-shadow: 0px -10px #0282f9 inset;
+                        }
+                    
                 }
             }
         }

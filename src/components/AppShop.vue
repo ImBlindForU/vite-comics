@@ -1,0 +1,80 @@
+<script>
+    export default{
+        name: "AppShop",
+        data(){
+            return{
+                shopLinks:[
+                    {
+                        imgText: "DIGITAL COMICS",
+                        image: "../assets/img/buy-comics-digital-comics.png",
+                    },
+                    {
+                        imgText: "DC MERCHANDISE",
+                        image: "../assets/img/buy-comics-merchandise.png",
+                    },
+                    {
+                        imgText: "SUBSCRIPTION",
+                        image: "../assets/img/buy-comics-subscriptions.png",
+                    },
+                    {
+                        imgText: "COMIC SHOP LOCATOR",
+                        image: "../assets/img/buy-comics-shop-locator.png",
+                    },
+                    {
+                        imgText: "DC POWER VISA",
+                        image: "../assets/img/buy-dc-power-visa.svg",
+                    },
+                ]
+            }
+        }
+    }
+</script>
+
+<template>
+     <div class="container-fluid blue">
+        <div class="container-main">
+            <ul>
+                <li v-for="shopLink in shopLinks">
+                    <span><img src="shopLink.image" alt=""></span>
+                    <span><a href="">{{shopLink.imgText}}</a></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</template>
+
+<style lang="scss" scoped>
+    .blue{
+        background-color: #0282f9;
+    }
+    .container-fluid{
+        min-width: 100vw;
+        .container-main{
+            width: 70vw;
+            height: 15vh;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            ul{
+                margin: 0 auto;
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                li{
+                    display: flex;
+                    align-items: center;
+                    padding: 2rem;
+                    span{
+                        img{
+                            
+                            max-width: 5vh;
+                        }
+
+                        padding: 1rem;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+</style>
