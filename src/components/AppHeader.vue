@@ -110,7 +110,7 @@
                 flex-direction: row;
                 li{
                     margin: 0 1rem;
-                    padding: 1rem;
+                    
                     line-height: 200px;
 
                     a{
