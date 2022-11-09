@@ -16,7 +16,7 @@ import { stringifyStyle } from '@vue/shared';
 
 <template>
         <div class="card">
-            <img :src="thumb" alt="">
+            <img :src="img" alt="">
         </div>
         
 </template>
