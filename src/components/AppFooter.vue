@@ -1,7 +1,9 @@
 <script>
     export default{
         name: "AppFooter",
-        footerLinks:[
+        data(){
+            return{
+                footerLinks:[
                     {
                         titleFooter:"DC COMICS",
                         subTitle:[
@@ -101,19 +103,22 @@
                     },
                     
                 ]
+            }
+        }
+        
     }
 </script>
 
 <template>
     <div class="container-fluid bk-img">
-        <div class="container-main">
+        <div class="container">
             <div class="top-footer">
                 <div class="list-footer">
                     <ul>
-                        <li v-for="footerLink in footerLinks">
+                        <li v-for="(footerLink, index) in footerLinks" :key="index">
                             <h2>{{footerLink.titleFooter}}</h2>
                             <ul>
-                                <li>{{footerLink.subTitle.sub}}</li>
+                                <li v-for="(footerLink, index) in footerLinks" :key="index">{{footerLink.subTitle.sub}}</li>
                             </ul>
                         </li>
                     </ul>
@@ -126,7 +131,7 @@
         </div>
         
     </div>
-    <div class="container-fluid-two grey">
+    <div class="container-fluid grey">
         <div class="bottom-footer">
                 <div class="btn">
                     <a href="">SING-UP NOW!</a>
@@ -146,11 +151,8 @@
         background-size: cover;
     }
     .container-fluid{
-        width: 100vw;
-        .container-main{
-            width: 70vw;
-            height: 50vh;
-            margin: 0 auto;
+        .container{
+            height: 600px;
             .top-footer{
                 display: flex;
                 justify-content: space-between;
@@ -173,10 +175,13 @@
                     }
                 }
                 .img-footer{
-                    
+                    overflow: hidden;
+
                     img{
-                        width: 40vw;
-                       
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: centre;
                     }
                 }
             }
@@ -185,10 +190,10 @@
     .grey{
         background-color: #303030;
     }
-    .container-fluid-two{
-        width: 100vw;
+    .container-fluid{
+   
         .bottom-footer{
-            height: 10vh;
+            height: 200px;
             width: 70vw;
             margin: 0 auto;
             display: flex;

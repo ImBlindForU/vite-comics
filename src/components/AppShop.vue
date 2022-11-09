@@ -37,7 +37,7 @@
 
 <template>
      <div class="container-fluid blue">
-        <div class="container-main">
+        <div class="container">
             <ul>
                 <li v-for="shopLink in shopLinks">
                     <span><img :src="getImagePath(shopLink.image)" alt=""></span>
@@ -53,11 +53,8 @@
         background-color: #0282f9;
     }
     .container-fluid{
-        min-width: 100vw;
-        .container-main{
-            width: 70vw;
-            height: 15vh;
-            margin: 0 auto;
+        .container{
+            
             display: flex;
             align-items: center;
             ul{
@@ -73,7 +70,7 @@
                     span{
                         img{
                             
-                            max-width: 5vh;
+                            max-width: 70px;
                         }
 
                         a{
