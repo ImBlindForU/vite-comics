@@ -19,7 +19,7 @@
 
 <style lang="scss" scoped>
     .black{
-        background-color: black;
+        background-color: #1c1c1c;
     }
     .container-fluid{
 

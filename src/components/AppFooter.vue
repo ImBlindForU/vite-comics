@@ -6,7 +6,7 @@
                 footerLinks:[
                     {
                         titleFooter:"DC COMICS",
-                        subTitle:[
+                        subTitles:[
                             {
                                 sub:"Characters"
                             },
@@ -118,7 +118,9 @@
                         <li v-for="(footerLink, index) in footerLinks" :key="index">
                             <h2>{{footerLink.titleFooter}}</h2>
                             <ul>
-                                <li v-for="(footerLink, index) in footerLinks" :key="index">{{footerLink.subTitle.sub}}</li>
+                                <li v-for="(subTitle, index) in footerLinks.subTitles" :key="index">
+                                    {{subTitle.sub}}
+                                </li>
                             </ul>
                         </li>
                     </ul>

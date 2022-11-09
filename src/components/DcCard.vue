@@ -2,21 +2,20 @@
 import { stringifyStyle } from '@vue/shared';
 
     export default{
-        components:{
             name: "DcCard",
             props: {
                 img: String,
                 prezzo: String,
                 serie: String,
                 tipo: String,
-            },
-        }
+            },  
     }
 </script>
 
 <template>
         <div class="card">
             <img :src="img" alt="">
+            <p>{{serie}}</p>
         </div>
         
 </template>
@@ -25,9 +24,13 @@ import { stringifyStyle } from '@vue/shared';
     
         .card{
             width: calc(100% / 6 - 2rem);
-            height: 300px;
+            height: 500px;
             background-color: red;
-            margin: 1rem;
+            margin: 2rem 1rem;
+            p{  
+                color: white;
+                padding: 1rem 0rem;
+            }
             img{
                 width: 100%;
                 height: 100%;
